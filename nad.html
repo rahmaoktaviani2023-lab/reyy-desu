@@ -150,20 +150,15 @@
             you mean more than words can say
         </div>
     </div>
+<script>
+    const imageElement = document.getElementById('userPhoto');
+    imageElement.src = 'foto.jpg';  // <-- udah diganti
 
-    <script>
-        // small helper so you can easily replace image src later
-        // kamu tinggal ganti 'your-image.jpg' dengan nama file poto kamu
-        // contoh: 'foto-cantik.jpg' atau 'gambar/putri.png'
-        const imageElement = document.getElementById('userPhoto');
-        // ganti src di bawah ini dengan poto kamu
-        imageElement.src = 'foto.jpg';  // <-- ganti ini dengan nama file poto kamu
-        
-        // if image fails to load, show placeholder text
-        imageElement.onerror = function() {
-            this.style.display = 'none';
-            this.nextElementSibling.style.display = 'flex';
-        };
-    </script>
+    imageElement.onerror = function() {
+        this.style.display = 'none';
+        this.nextElementSibling.style.display = 'flex';
+    };
+</script>
+
 </body>
 </html>
