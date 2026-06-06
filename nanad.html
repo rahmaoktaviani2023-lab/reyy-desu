@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>💗 for my girl • modern lucu 💗</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFF2F5 0%, #FFE4EC 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', 'Segoe UI', 'Quicksand', system-ui, -apple-system, 'Inter', sans-serif;
+            padding: 20px;
+            position: relative;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%23ff809d"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 10 5, auto;
+        }
+
+        /* dekorasi bubble lucu */
+        .bubble-bg {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 210, 225, 0.5);
+            border-radius: 50%;
+            animation: floatBubble 12s infinite ease-in-out;
+            backdrop-filter: blur(2px);
+        }
+
+        @keyframes floatBubble {
+            0% { transform: translateY(100vh) scale(0.6); opacity: 0; }
+            20% { opacity: 0.6; }
+            80% { opacity: 0.5; }
+            100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+        }
+
+        /* kartu utama modern + lucu */
+        .card {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 253, 254, 0.96);
+            backdrop-filter: blur(3px);
+            border-radius: 68px;
+            padding: 30px 28px 42px;
+            box-shadow: 0 25px 45px -12px rgba(201, 98, 118, 0.35), 0 8px 18px rgba(255, 190, 205, 0.4), inset 0 1px 2px rgba(255,255,240,0.8);
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            z-index: 10;
+            border: 2px solid #ffffffaa;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 30px 50px -12px #f5a9bb;
+        }
+
+        /* frame foto lucu bergoyang */
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 18px auto;
+            border-radius: 50%;
+            background: linear-gradient(125deg, #FFB7CD, #FF87AB);
+            padding: 5px;
+            box-shadow: 0 15px 25px -8px #FF99B5;
+            transition: 0.2s;
+            animation: gentleWobble 5s infinite ease;
+        }
+
+        @keyframes gentleWobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(2deg); }
+            75% { transform: rotate(-2deg); }
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            background: #ffdee8;
+            transition: transform 0.3s;
+        }
+
+        .photo-frame img:hover {
+            transform: scale(1.02);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #ffeef3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #d16d87;
+            font-weight: 600;
+            text-align: center;
+            font-family: monospace;
+            backdrop-filter: blur(4px);
+            gap: 6px;
+            flex-direction: column;
+        }
+
+        /* greeting lucu */
+        .greeting {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(115deg, #F9738F, #FFB347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 14px;
+            letter-spacing: -0.3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(2px);
+        }
+
+        .greeting span {
+            font-size: 28px;
+        }
+
+        /* pesan modern dan lucu */
+        .message {
+            background: #FFF9FB;
+            border-radius: 48px;
+            padding: 24px 20px;
+            margin: 20px 0 12px;
+            box-shadow: 0 10px 20px rgba(247, 136, 160, 0.15);
+            border: 1px solid #FFE1EA;
+            transition: 0.2s;
+        }
+
+        .message p {
+            font-size: 17px;
+            line-height: 1.55;
+            color: #502c38;
+            margin-bottom: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .message p i {
+            font-style: normal;
+            display: inline-block;
+        }
+
+        .message p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* animasi hati gemoy */
+        .heart {
+            font-size: 52px;
+            margin: 12px 0 6px;
+            display: inline-block;
+            animation: bounceHeart 1s infinite alternate;
+            filter: drop-shadow(0 5px 12px rgba(255, 80, 110, 0.4));
+            cursor: pointer;
+            transition: 0.1s;
+        }
+
+        @keyframes bounceHeart {
+            0% { transform: scale(1) translateY(0px);}
+            100% { transform: scale(1.2) translateY(-6px);}
+        }
+
+        .heart:active {
+            transform: scale(0.95);
+        }
+
+        /* signature gemoy */
+        .signature {
+            font-size: 16px;
+            font-weight: 600;
+            color: #bf7a8f;
+            border-top: 2px dashed #FFCDDA;
+            padding-top: 20px;
+            margin-top: 14px;
+            font-style: normal;
+            letter-spacing: -0.2px;
+            background: #fff4f7;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+            border-radius: 60px;
+        }
+
+        .small-note {
+            font-size: 13px;
+            background: linear-gradient(95deg, #ffe5ed, #fff0f5);
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 18px;
+            color: #d26e8a;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+            border: 1px solid #ffc0d0;
+        }
+
+        /* kontrol musik modern */
+        .music-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #ffffffc9;
+            backdrop-filter: blur(12px);
+            padding: 8px 22px;
+            border-radius: 100px;
+            margin-top: 20px;
+            border: 1px solid #ffbfcf;
+            box-shadow: 0 8px 14px rgba(0,0,0,0.02);
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .music-card:hover {
+            background: #ffeef3;
+            transform: scale(1.02);
+        }
+
+        .music-wave {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .wave {
+            width: 4px;
+            height: 12px;
+            background: #ff809d;
+            border-radius: 4px;
+            animation: waveAnim 0.9s infinite ease alternate;
+        }
+
+        .wave:nth-child(2) { height: 18px; animation-delay: 0.2s; background: #ff9bb4; }
+        .wave:nth-child(3) { height: 10px; animation-delay: 0.4s; background: #ffb7c5; }
+        .wave:nth-child(4) { height: 20px; animation-delay: 0.1s; background: #ff6f91; }
+
+        @keyframes waveAnim {
+            0% { transform: scaleY(0.7); opacity: 0.6;}
+            100% { transform: scaleY(1.2); opacity: 1;}
+        }
+
+        .music-text {
+            font-weight: 600;
+            font-size: 14px;
+            color: #a65771;
+        }
+
+        /* fallback button modern & cute */
+        .cute-btn {
+            background: linear-gradient(105deg, #FF8AAE, #FFB7CD);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 15px;
+            color: white;
+            margin-top: 14px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 8px 16px #ffb7c96e;
+        }
+
+        .cute-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(105deg, #ff718f, #ff9bbe);
+        }
+
+        /* responsif */
+        @media (max-width: 550px) {
+            .card {
+                padding: 24px 18px 32px;
+            }
+            .message p {
+                font-size: 15px;
+            }
+            .photo-frame {
+                width: 125px;
+                height: 125px;
+            }
+            .greeting {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- bubble background lucu -->
+<div class="bubble-bg" id="bubbleContainer"></div>
+
+<div class="card">
+    <!-- photo frame -->
+    <div class="photo-frame">
+        <img src="foto.jpg" alt="my girl's smile" id="userPhoto">
+        <div class="photo-placeholder" style="display: none;">
+            🌸 📸 <span style="font-weight: 400;">add your photo</span>
+        </div>
+    </div>
+
+    <div class="greeting">
+        <span>🐻‍❄️</span> for you, my girl <span>🎀</span>
+    </div>
+
+    <div class="message">
+        <p>✨ you are the reason my days feel softer, ✨</p>
+        <p>🍬 the quiet kind of beautiful that stays. 🍬</p>
+        <p>💖 every little thing you do makes my world better, 💖</p>
+        <p>🌼 even without trying. 🌼</p>
+        <p>🌸 thank you for just being you. 🌸</p>
+    </div>
+
+    <div class="heart" id="cuteHeart">
+        ❤️‍🔥
+    </div>
+
+    <div class="signature">
+        always, for you 💌
+    </div>
+    
+    <div class="small-note">
+        <span>🐣</span> you mean more than words can say <span>🐣</span>
+    </div>
+
+    <!-- Musik panel modern & lucu -->
+    <div class="music-card" id="musicPanel">
+        <div class="music-wave">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <div class="music-text" id="musicLabel">🎵 blue - yung kai</div>
+        <span style="font-size: 14px;">🎧</span>
+    </div>
+
+    <button class="cute-btn" id="enableMusicBtn">
+        🎤✨ Klik untuk mendengar lagu ✨🎤
+    </button>
+</div>
+
+<audio id="bgMusic" loop preload="auto" style="display: none;">
+    <source src="yung kai - blue (official music video).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    (function() {
+        // elemen
+        const audio = document.getElementById('bgMusic');
+        const musicLabel = document.getElementById('musicLabel');
+        const enableBtn = document.getElementById('enableMusicBtn');
+        const musicPanel = document.getElementById('musicPanel');
+        const heartEl = document.getElementById('cuteHeart');
+        
+        // fungsi untuk memulai musik dengan gaya
+        function playMusic(showToast = false) {
+            if (!audio) return;
+            audio.muted = false;
+            audio.volume = 0.6;
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    // sukses
+                    musicLabel.innerHTML = "🎵 blue ~ sedang mendendang 💙";
+                    if (enableBtn) enableBtn.style.display = 'none';
+                    // tambah efek di panel music
+                    document.querySelectorAll('.wave').forEach(w => w.style.animation = 'waveAnim 0.9s infinite ease alternate');
+                }).catch((err) => {
+                    if (err.name === 'NotAllowedError') {
+                        // tetap tampilkan tombol
+                        if (enableBtn) enableBtn.style.display = 'flex';
+                        musicLabel.innerHTML = "🔇 klik tombol pink untuk musik";
+                    } else {
+                        console.warn("error audio:", err);
+                        musicLabel.innerHTML = "⚠️ file mp3 tidak ditemukan?";
+                    }
+                });
+            } else {
+                audio.play();
+                musicLabel.innerHTML = "🎵 blue ~ sedang mendendang 💙";
+                if(enableBtn) enableBtn.style.display = 'none';
+            }
+        }
+
+        // event tombol manual
+        if (enableBtn) {
+            enableBtn.addEventListener('click', () => {
+                playMusic();
+            });
+        }
+        
+        // jika panel music diklik, coba mainkan juga (user friendly)
+        if (musicPanel) {
+            musicPanel.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (audio && (audio.paused || audio.muted === true)) {
+                    playMusic();
+                } else if (audio && !audio.paused) {
+                    // jika sudah jalan, tidak perlu apa2
+                } else {
+                    playMusic();
+                }
+            });
+        }
+
+        // klik hati gemoy juga bisa aktifin musik (lucu banget)
+        if (heartEl) {
+            heartEl.addEventListener('click', () => {
+                if (audio && (audio.paused || audio.muted === true || !audio.currentTime)) {
+                    playMusic();
+                    // efek visual hati tambahan
+                    heartEl.style.animation = 'none';
+                    setTimeout(() => heartEl.style.animation = 'bounceHeart 1s infinite alternate', 50);
+                } else if (audio && !audio.paused) {
+                    // sudah main
+                } else {
+                    playMusic();
+                }
+            });
+        }
+
+        // AUTOPLAY MAKSIMAL: coba langsung play saat halaman siap (banyak browser allow jika mute? Tapi kita unmute)
+        // strategi: pertama muted = false, volume kecil, lalu play secara otomatis, jika gagal muncul tombol.
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if (audio) {
+                    audio.muted = false;
+                    audio.volume = 0.6;
+                    const autoPlayAttempt = audio.play();
+                    if (autoPlayAttempt !== undefined) {
+                        autoPlayAttempt.catch(error => {
+                            if (error.name === 'NotAllowedError') {
+                                if (enableBtn) enableBtn.style.display = 'flex';
+                                musicLabel.innerHTML = "🎀 klik tombol pink 🎀";
+                            } else {
+                                console.log("error lain", error);
+                            }
+                        });
+                    }
+                }
+            }, 180);
+        });
+
+        // handle error file audio
+        audio.addEventListener('error', () => {
+            musicLabel.innerHTML = "🎼 file mp3 tidak ada? ganti namanya ya 🎼";
+            if(enableBtn) enableBtn.style.display = 'flex';
+            enableBtn.innerText = "✨ Cek file 'yung kai - blue.mp3' ✨";
+        });
+
+        // jika audio berhasil diputar (entah autoplay atau manual) ubah UI
+        audio.addEventListener('play', () => {
+            musicLabel.innerHTML = "🎵 blue ~ sedang mendendang 💙";
+            if(enableBtn) enableBtn.style.display = 'none';
+        });
+
+        // foto placeholder logic
+        const userPhoto = document.getElementById('userPhoto');
+        const placeholderDiv = document.querySelector('.photo-placeholder');
+        if (userPhoto) {
+            userPhoto.src = "foto.jpg";
+            userPhoto.onerror = () => {
+                userPhoto.style.display = 'none';
+                if (placeholderDiv) {
+                    placeholderDiv.style.display = 'flex';
+                    placeholderDiv.innerHTML = "🐣 📸 <span style='font-size:13px;'>add your cute photo</span>";
+                }
+            };
+            userPhoto.onload = () => {
+                if (placeholderDiv) placeholderDiv.style.display = 'none';
+                userPhoto.style.display = 'block';
+            };
+        }
+
+        // generate bubble latar belakang lucu
+        function createBubbles() {
+            const container = document.getElementById('bubbleContainer');
+            if (!container) return;
+            const bubbleCount = 18;
+            for (let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                const size = Math.floor(Math.random() * 50) + 20;
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.animationDuration = Math.random() * 12 + 7 + 's';
+                bubble.style.animationDelay = Math.random() * 10 + 's';
+                bubble.style.background = `radial-gradient(circle at 30% 30%, rgba(255, 180, 200, 0.5), rgba(255, 220, 235, 0.3))`;
+                container.appendChild(bubble);
+            }
+        }
+        createBubbles();
+
+        // tambahkan sentuhan modern: jika user hover di music panel ada tooltip imut
+        if(musicPanel) musicPanel.title = "klik untuk memutar lagu blue 💙";
+        
+        // efek tambahan: stiker lucu di console (optional)
+        console.log("%c💗 Halo my girl! 💗", "color: #ff6f91; font-size: 16px; font-weight: bold;");
+        console.log("%cSemoga harimu secerah senyumanmu 💖", "color: #ff8aa8;");
+    })();
+</script>
+</body>
+  </html>
